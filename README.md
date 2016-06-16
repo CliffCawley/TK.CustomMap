@@ -1,5 +1,5 @@
 # Extended Map Control for Xamarin.Forms.Maps
-[![NuGet](https://badge.fury.io/nu/TK.CustomMap.svg)](https://www.nuget.org/packages/TK.CustomMap/) [![Build status](https://ci.appveyor.com/api/projects/status/t3rlse4w5omu44sy?svg=true)](https://ci.appveyor.com/project/TorbenK/tk-custommap)
+[![NuGet](https://badge.fury.io/nu/TK.CustomMap.svg)](https://www.nuget.org/packages/TK.CustomMap/) [![Build status](https://ci.appveyor.com/api/projects/status/g2pv4rckrudbsm2h?svg=true)](https://ci.appveyor.com/project/TorbenK/tk-custommap)
 
 This is an extended, bindable map control based on Xamarin.Forms.Maps. Here is a list of some available features:
 
@@ -89,4 +89,7 @@ public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 * [yumshinetech](https://github.com/yumshinetech)
 * [MithrilMan](https://github.com/MithrilMan)
 * [CliffCawley](https://github.com/CliffCawley)
+* [JeanCollas](https://github.com/JeanCollas)
+* [Falco20019](https://github.com/Falco20019)
+* [RanaInside](https://github.com/RanaInside)
 
