@@ -598,7 +598,10 @@ namespace TK.CustomMap.Sample
 
         protected virtual void OnPropertyChanged(string propertyName)
         {
-            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            var ev = this.PropertyChanged;
+
+            if (ev != null)
+                ev(this, new PropertyChangedEventArgs(propertyName));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
