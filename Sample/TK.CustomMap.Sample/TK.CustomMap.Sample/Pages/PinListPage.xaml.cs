@@ -31,7 +31,9 @@ namespace TK.CustomMap.Sample.Pages
         }
         protected virtual void OnPinSelected(TKCustomMapPin pin)
         {
-            this.PinSelected?.Invoke(this, new PinSelectedEventArgs(pin));
+            var ev = this.PinSelected;
+            if (ev != null)
+                ev(this, new PinSelectedEventArgs(pin));
         }
     }
     public class PinSelectedEventArgs : EventArgs

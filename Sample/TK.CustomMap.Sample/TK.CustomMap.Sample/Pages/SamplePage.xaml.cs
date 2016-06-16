@@ -1,5 +1,4 @@
 ﻿using Xamarin.Forms;
-using Xamarin.Forms.Maps;
 
 namespace TK.CustomMap.Sample
 {
@@ -19,8 +18,7 @@ namespace TK.CustomMap.Sample
             var autoComplete = new PlacesAutoComplete { ApiToUse = PlacesAutoComplete.PlacesApi.Native };
             autoComplete.SetBinding(PlacesAutoComplete.PlaceSelectedCommandProperty, "PlaceSelectedCommand");
 
-            var newYork = new Position(40.7142700, -74.0059700);
-            var mapView = new TKCustomMap(MapSpan.FromCenterAndRadius(newYork, Distance.FromKilometers(2)));
+            var mapView = new TKCustomMap();
             mapView.SetBinding(TKCustomMap.CustomPinsProperty, "Pins");
             mapView.SetBinding(TKCustomMap.MapClickedCommandProperty, "MapClickedCommand");
             mapView.SetBinding(TKCustomMap.MapLongPressCommandProperty, "MapLongPressCommand");

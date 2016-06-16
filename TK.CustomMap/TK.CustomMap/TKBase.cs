@@ -1,15 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using Xamarin.Forms;
 
 namespace TK.CustomMap
 {
     /// <summary>
     /// Base class handling property changed
     /// </summary>
-    public class TKBase : BindableObject
+    public class TKBase : INotifyPropertyChanged
     {
+        /// <inheritdoc />
+        public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
         /// Changes the field value if not equal
@@ -31,6 +32,16 @@ namespace TK.CustomMap
             field = value;
             this.OnPropertyChanged(propertyName);
             return true;
+        }
+        /// <summary>
+        /// Raises <see cref="PropertyChanged"/>
+        /// </summary>
+        /// <param name="propertyName">Name of the property</param>
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            var ev = this.PropertyChanged;
+            if (ev != null)
+                ev(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

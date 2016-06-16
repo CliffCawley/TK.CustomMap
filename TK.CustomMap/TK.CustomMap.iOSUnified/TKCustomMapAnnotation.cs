@@ -1,5 +1,4 @@
-﻿using CoreGraphics;
-using CoreLocation;
+﻿using CoreLocation;
 using Foundation;
 using MapKit;
 
@@ -62,12 +61,6 @@ namespace TK.CustomMap.iOSUnified
         public TKCustomMapAnnotation(TKCustomMapPin pin)
         {
             this._formsPin = pin;
-        }
-
-        public void Point(MKAnnotationView view)
-        {
-            float radians = (float) this._formsPin.Rotation.ToRadian();
-            view.Transform = CGAffineTransform.MakeRotation(radians);
         }
     }
 }
